@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
+import { shoppingCartReducer } from '../services/ShoppingCart/reducer'
 
 export const createRootReducer = () => {
   const rootReducer = combineReducers({
-    dummy: (state = {}, action) => { return state; },
+    shoppingCart: shoppingCartReducer,
+    // dummy: (state = {}, action) => { return state; },
   });
 
   return rootReducer;
